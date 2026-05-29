@@ -1,5 +1,5 @@
 /* =========================================================================
- * Boilerly — Motore di compliance
+ * ManuTrack — Motore di compliance
  * -------------------------------------------------------------------------
  * Calcola le scadenze legali obbligatorie di ogni impianto a partire dal
  * tipo, dalla potenza/carica e dall'ultimo intervento registrato.

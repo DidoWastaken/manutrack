@@ -1,11 +1,11 @@
-# Boilerly
+# ManuTrack
 
 **Le scadenze degli impianti dei tuoi clienti, sotto controllo.**
 
 SaaS verticale per **piccoli installatori e manutentori** di caldaie, climatizzatori, pompe di calore e impianti frigoriferi. Calcola in automatico le scadenze dei controlli obbligatori per legge, avvisa prima che scadano, genera promemoria per il cliente e rapportini PDF.
 
-🔗 **Demo live:** https://didowastaken.github.io/boilerly/
-📣 **Volantino stampabile:** [`volantino.html`](https://didowastaken.github.io/boilerly/volantino.html)
+🔗 **Demo live:** https://didowastaken.github.io/manutrack/
+📣 **Volantino stampabile:** [`volantino.html`](https://didowastaken.github.io/manutrack/volantino.html)
 
 > Demo funzionante **senza backend**: apri `index.html` (sito/prezzi + lista d'attesa) o `app.html` (applicazione). I dati vivono in `localStorage` e all'avvio è precaricato un set di dati demo realistici.
 
@@ -44,12 +44,12 @@ Le scadenze **non sono inserite a mano**: vengono calcolate dal tipo di impianto
   - 5–50 t CO₂eq: 12 mesi · 50–500 t: 6 mesi · ≥500 t: 3 mesi (sotto 5 t: nessun controllo periodico)
 - **Libretto di impianto** — *DM 10/02/2014*: aggiornato a ogni intervento.
 
-> ⚠️ Le frequenze del *bollino* variano per regione: qui sono codificati i minimi nazionali e centralizzati in `COMPLIANCE_RULES`, pronti per essere resi configurabili per cliente/regione. Boilerly è uno strumento gestionale, non sostituisce la consulenza tecnica/legale.
+> ⚠️ Le frequenze del *bollino* variano per regione: qui sono codificati i minimi nazionali e centralizzati in `COMPLIANCE_RULES`, pronti per essere resi configurabili per cliente/regione. ManuTrack è uno strumento gestionale, non sostituisce la consulenza tecnica/legale.
 
 ## Architettura
 
 ```
-boilerly/
+manutrack/
 ├── index.html          Sito marketing + pricing + lista d'attesa
 ├── app.html            Applicazione (mini-SPA)
 ├── css/style.css       Tema dark, responsive, stili di stampa
@@ -84,7 +84,7 @@ Vanilla HTML/CSS/JS, **nessun build step**. Tutta la lettura/scrittura dati pass
 Apri direttamente i file nel browser (doppio clic) — non serve un server. Per evitare blocchi su `localStorage` con `file://` su alcuni browser, in alternativa:
 
 ```powershell
-cd C:\Dev\personal\boilerly
+cd C:\Dev\personal\manutrack
 python -m http.server 8080
 # poi visita http://localhost:8080/  (sito)  oppure  /app.html
 ```
