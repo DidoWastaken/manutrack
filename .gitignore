@@ -6,7 +6,7 @@ Thumbs.db
 .idea/
 
 # Esportazioni locali / dati di test
-manutrack-export.json
+boilerly-export.json
 
 # Playbook interno (non pubblicare)
 VENDITA.md

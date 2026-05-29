@@ -1,5 +1,5 @@
 /* =========================================================================
- * ManuTrack — UI / Router
+ * Boilerly — UI / Router
  * -------------------------------------------------------------------------
  * Mini-SPA senza framework: una funzione render per vista, lo stato vive in
  * Store (localStorage) e in COMPLIANCE per le scadenze. Niente dipendenze.
@@ -465,7 +465,7 @@ Cordiali saluti`;
         .note{background:#f6f8fa;border-radius:8px;padding:12px;font-size:13.5px;margin-top:8px}
         @media print{button{display:none}}
       </style></head><body>
-      <div class="head"><div><h1><span class="brand">ManuTrack</span> · Rapportino di intervento</h1><div class="num">N. ${i.rapportinoN||'—'} · ${fmtData(i.data)}</div></div></div>
+      <div class="head"><div><h1><span class="brand">Boilerly</span> · Rapportino di intervento</h1><div class="num">N. ${i.rapportinoN||'—'} · ${fmtData(i.data)}</div></div></div>
       <table>
         <tr><th>Cliente</th><td>${esc(cli?cli.ragioneSociale:'—')}</td></tr>
         <tr><th>Sede</th><td>${esc(cli?(cli.indirizzo+', '+cli.citta):'—')}</td></tr>
@@ -638,7 +638,7 @@ Cordiali saluti`;
   $('#btn-export').onclick = () => {
     const blob = new Blob([Store.exportJSON()], { type: 'application/json' });
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob); a.download = 'manutrack-export.json'; a.click();
+    a.href = URL.createObjectURL(blob); a.download = 'boilerly-export.json'; a.click();
     URL.revokeObjectURL(a.href); toast('Database esportato');
   };
 

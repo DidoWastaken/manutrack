@@ -1,5 +1,5 @@
 /* =========================================================================
- * ManuTrack — Data layer (localStorage)
+ * Boilerly — Data layer (localStorage)
  * -------------------------------------------------------------------------
  * Unico punto di accesso ai dati. La UI non tocca mai localStorage
  * direttamente: chiama Store.*  ->  così sostituire questo file con chiamate
@@ -11,7 +11,7 @@
 const Store = (() => {
   'use strict';
 
-  const KEY = 'manutrack:v1';
+  const KEY = 'boilerly:v1';
 
   /* Stato in memoria (specchio di localStorage) */
   let db = null;
